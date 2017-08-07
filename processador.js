@@ -1,18 +1,15 @@
 var connection = require('./db')()();
 
-//console.log(connection = connection()());
-
-function searchRate(prefix){
-    connection.query('SELECT * FROM prefixos where prefixo = ?', [prefix], function(error, result){
+function searchRate(prefix, callback){
+    connection.query('select custo_conexao, segundos_incluidos, custo_minuto, incremento_inicial, increment, prefixo from clientes, tarifas, areas, prefixos where clientes.id = tarifas.fk_id_cliente and areas.id = tarifas.fk_id_area and areas.id = prefixos.fk_id_area and clientes.id = 1 and prefixos.prefixo = ?', [prefix], function(error, result){
         if(error) console.log(`Erro: ${error}`);
         if(result.length == 0){
             searchRate(prefix.slice(0, prefix.length-1))
         }else{
-            console.log(prefix);
-            console.log(result[0].id);
             connection.end();
+            return callback(null, result[0]);
         }
     });
 };
 
-searchRate('551135880866');
+module.exports = searchRate;
