@@ -2,4 +2,6 @@
 
 Programa para processar cdr e calcular custo das chamadas
 
-Atualização
+Este programa:
+        Processa registro individuais
+        Processa listas de registros
