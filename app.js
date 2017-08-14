@@ -1,8 +1,6 @@
 var processador = require('./processador');
 
 var lista = [
-    ['551135880866',30],
-    ['5511999683333',60],
     ['5511984158516',60],
     ['5511984158516',60],
     ['5511968087930',90],
@@ -32,12 +30,12 @@ processador.processCallList(lista, function(error, data){
     }
 });
 
-var registro = ['551135880866', 30];
+//var registro = ['551135880866', 30];
 
-processador.processCall(registro, function(error, data){
-    if(error){
-        console.log(error);
-    }else{
-        console.log('Registro processado:\n' + data);
-    }
-});
+//processador.processCall(registro, function(error, data){
+//    if(error){
+//        console.log(error);
+//    }else{
+//        console.log('Registro processado:\n' + data);
+//    }
+//});

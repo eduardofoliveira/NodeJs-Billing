@@ -57,15 +57,21 @@ INSERT INTO dids (did, fk_id_cliente) VALUES ('5511358800866', 2);
 
 INSERT INTO areas (nome) VALUES ('São Paulo Fixo');
 INSERT INTO areas (nome) VALUES ('São Paulo Móvel');
+INSERT INTO areas (nome) VALUES ('Brasil');
 
 INSERT INTO prefixos (prefixo, fk_id_area) VALUES ('5511', 1);
 INSERT INTO prefixos (prefixo, fk_id_area) VALUES ('55119', 2);
+INSERT INTO prefixos (prefixo, fk_id_area) VALUES ('55', 3);
 
 INSERT INTO tarifas (custo_conexao, segundos_incluidos, custo_minuto, incremento_inicial, increment, fk_id_area,
-fk_id_cliente) VALUES (0, 4, 0.04, 30, 6, 1, 1);
+fk_id_cliente) VALUES (0, 4, 0.06, 30, 6, 1, 1);
 
 INSERT INTO tarifas (custo_conexao, segundos_incluidos, custo_minuto, incremento_inicial, increment, fk_id_area,
-fk_id_cliente) VALUES (0, 4, 0.04, 30, 6, 1, 2);
+fk_id_cliente) VALUES (0, 4, 0.49, 30, 6, 1, 2);
+
+INSERT INTO tarifas (custo_conexao, segundos_incluidos, custo_minuto, incremento_inicial, increment, fk_id_area,
+fk_id_cliente) VALUES (0, 4, 0.10, 30, 6, 1, 3);
+
 
 INSERT INTO tarifas (custo_conexao, segundos_incluidos, custo_minuto, incremento_inicial, increment, fk_id_area,
 fk_id_cliente) VALUES (0, 4, 0.69, 30, 6, 2, 1);
