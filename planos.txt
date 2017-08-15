@@ -1,0 +1,14 @@
+[Basix Plano Nacional]
+Área Metropolitana da Grande São Paulo, 0.06
+Rio de Janeiro, Belo Horizonte, Curitiba e Brasília, 0.06
+Demais Cidades do Brasil, 0.10
+Brasil Móvel, 0.49
+
+[Plano Basix]
+Área Metropolitana da Grande São Paulo, 0.04
+Rio de Janeiro, Belo Horizonte, Curitiba e Brasília, 0.16
+Demais Capitais Estaduais, 0.19
+Principais Cidades Interior do Estado SP, 0.19
+Cidades Importantes Brasil, 0.28
+Demais Cidades do Brasil, 0.33
+Brasil Móvel, 0.69

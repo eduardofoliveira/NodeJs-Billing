@@ -9,6 +9,10 @@ csv
  .fromStream(stream, {delimiter :';'})
  .on("data", function(data){
  		//registros.push([data[0], titleCase(data[1]), data[2], data[3]]);
+        if(data[0].indexOf('551199968') == 0){
+            console.log([data[0], titleCase(data[1]), data[2], data[3]]);
+        }
+
         if(descricao.indexOf(data[2]) > -1){
 
         }else{
