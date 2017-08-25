@@ -12,3 +12,9 @@ Principais Cidades Interior do Estado SP, 0.19
 Cidades Importantes Brasil, 0.28
 Demais Cidades do Brasil, 0.33
 Brasil Móvel, 0.69
+
+[Saida Transit]
+Área Metropolitana da Grande São Paulo, 0.02133
+Rio de Janeiro, Belo Horizonte, Curitiba e Brasília, 0.04933
+Demais Cidades do Brasil, 0.04933
+Brasil Móvel, 0.18500

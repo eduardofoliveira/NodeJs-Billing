@@ -4,26 +4,27 @@ function processarRegistro(tempo){
     });
 };
 
-console.log('Antes das Promises');
-
-Promise.all([
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100),
-    processarRegistro(100)
-]).then(result => {
-    result.forEach(function(valor){
-        console.log(valor);
-    });
+processarRegistro(200).then(result => {
+    console.log(result);
 });
 
-console.log('Depois das Promises');
-
-//var p1 = processarRegistro(123);
-//p1.then(result => console.log('Resultado da Promisse: ',result));
+// console.log('Antes das Promises');
+//
+// Promise.all([
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100),
+//     processarRegistro(100)
+// ]).then(result => {
+//     result.forEach(function(valor){
+//         console.log(valor);
+//     });
+// });
+//
+// console.log('Depois das Promises');
