@@ -28,13 +28,13 @@ csv
 
      if(data[0].length >= 5 && data[0].length <= 8){
          if(data[4] === '0.04'){
-             data[4] = '0.02133';
+             data[4] = '0.0409';
          }
          if(data[4] === '0.69'){
-             data[4] = '0.18500';
+             data[4] = '0.3980';
          }
          if(data[4] === '0.16' || data[4] === '0.19' || data[4] === '0.28' || data[4] === '0.33'){
-             data[4] = '0.04933';
+             data[4] = '0.1113';
          }
 
         //  if(data[0] == '55114666'){
@@ -43,9 +43,25 @@ csv
         //  }
 
          if(contador < 25000){
-             lista.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '', '777837']);
+             if(data[4] === '0.0409'){
+                 lista.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '5511', '8']);
+             }
+             if(data[4] === '0.3980'){
+                 lista.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '5511', '8']);
+             }
+             if(data[4] === '0.1113'){
+                 lista.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '55', '8012']);
+             }
          }else{
-             lista2.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '', '777837']);
+             if(data[4] === '0.0409'){
+                 lista2.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '5511', '8']);
+             }
+             if(data[4] === '0.3980'){
+                 lista2.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '5511', '8']);
+             }
+             if(data[4] === '0.1113'){
+                 lista2.push([data[0], data[1], data[2], data[3], data[4], data[5], data[6], '', '55', '8012']);
+             }
          }
          contador += 1;
      }
@@ -107,14 +123,14 @@ csv
 
     //console.log(lista);
 
-    var file = fs.createWriteStream('Termination Rate SaidaTransit 1.csv');
+    var file = fs.createWriteStream('Termination Rate Locus 1.csv');
 	file.on('error', function(err) { /* error handling */ });
 	lista.forEach(function(v) {
 		file.write(v.join(',') + '\r\n');
 	});
 	file.end();
 
-    var file = fs.createWriteStream('Termination Rate SaidaTransit 2.csv');
+    var file = fs.createWriteStream('Termination Rate Locus 2.csv');
 	file.on('error', function(err) { /* error handling */ });
 	lista2.forEach(function(v) {
 		file.write(v.join(',') + '\r\n');
